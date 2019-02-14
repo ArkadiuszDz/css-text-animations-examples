@@ -1,3 +1,9 @@
+@keyframes bounce {
+  from {
+    top: 0; }
+  to {
+    top: -5px; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -438,3 +444,43 @@ h1 {
     transform: rotateX(90deg); }
   #wrapper-13 p:hover::after {
     transform: rotateX(-90deg); }
+
+#wrapper-14 p {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -2px;
+  font-family: Arial; }
+  #wrapper-14 p span {
+    transition: 0.4s;
+    position: relative; }
+    #wrapper-14 p span:hover {
+      top: -5px; }
+
+#wrapper-15 p {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -2px;
+  font-family: Arial; }
+  #wrapper-15 p:hover span {
+    position: relative;
+    animation: bounce 0.1s linear; }
+    #wrapper-15 p:hover span:nth-of-type(2) {
+      animation-delay: 0.1s; }
+    #wrapper-15 p:hover span:nth-of-type(3) {
+      animation-delay: 0.2s; }
+    #wrapper-15 p:hover span:nth-of-type(4) {
+      animation-delay: 0.3s; }
+    #wrapper-15 p:hover span:nth-of-type(6) {
+      animation-delay: 0.4s; }
+    #wrapper-15 p:hover span:nth-of-type(7) {
+      animation-delay: 0.5s; }
+    #wrapper-15 p:hover span:nth-of-type(8) {
+      animation-delay: 0.6s; }
+    #wrapper-15 p:hover span:nth-of-type(9) {
+      animation-delay: 0.7s; }
+    #wrapper-15 p:hover span:nth-of-type(10) {
+      animation-delay: 0.8s; }
+    #wrapper-15 p:hover span:nth-of-type(11) {
+      animation-delay: 0.9s; }

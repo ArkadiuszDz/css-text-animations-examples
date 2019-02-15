@@ -46,7 +46,6 @@ h1 {
             white-space: nowrap;
             transition: 1.5s;
             color: red;
-            text-align: left;
             padding: 30px 0;
             font-size: 18px;
             font-weight: 400;
@@ -587,3 +586,36 @@ h1 {
     }
 }
 
+#wrapper-17 {
+    position: relative;
+    p {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        font-family: Arial;
+        transition: 1s;
+    }
+    p.text-hover {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: 1.5s;
+        color: red;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Arial;
+        background-color: yellow;
+        span {
+            display: inline-block;
+        }
+    }
+    
+    &:hover {
+        p.text-hover {
+            width: 100%;
+        }
+    }
+}

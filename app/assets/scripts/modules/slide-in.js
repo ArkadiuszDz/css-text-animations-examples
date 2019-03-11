@@ -1,13 +1,25 @@
 export default class SlideIn {
-    constructor (settings) {
-        //this.slideWrapper = settings.slideWrapper || 'slide-in-wrapper';
-        this.slideText = settings.slideText || 'slide-in-text';
-        this.slideFill = settings.slideFill || 'slide-in-fill';
-        this.slideAnimate = settings.slideAnimate || 'slide-in-animate';
-        this.slideElement = document.getElementsByClassName(this.slideText);
-        console.log(this.slideElement);
-    }
-    events () {
 
+    constructor (settings = {}) {
+        this.slideWrapper = document.getElementsByClassName(settings.slideWrapper || 'slide-in-wrapper')[0];
+        this.slideText = document.getElementsByClassName(settings.slideText || 'slide-in-text-inner')[0];
+        this.slideFill = document.getElementsByClassName(settings.slideFill || 'slide-in-fill');
+        this.slideAnimate = document.getElementsByClassName(settings.slideAnimate || 'slide-in-animate')[0];
+        this.slideElement = document.getElementsByClassName(this.slideText)[0];
+        this.setStyles();
+        this.events();
     }
+
+    setStyles () {
+        this.slideFill[0].style.width = `${(this.slideWrapper.offsetWidth - this.slideText.offsetWidth) / 2}px`;
+        this.slideFill[1].style.width = `${(this.slideWrapper.offsetWidth - this.slideText.offsetWidth) / 2}px`;
+    }
+
+    events () {
+        window.addEventListener('resize' ,() => {
+            this.slideFill[0].style.width = `${(this.slideWrapper.offsetWidth - this.slideText.offsetWidth) / 2}px`;
+            this.slideFill[1].style.width = `${(this.slideWrapper.offsetWidth - this.slideText.offsetWidth) / 2}px`;
+        });
+    }
+
 }

@@ -119,9 +119,13 @@ function () {
     value: function events() {
       var _this = this;
 
+      var resizeTimer;
       window.addEventListener('resize', function () {
-        _this.slideFill[0].style.width = "".concat((_this.slideWrapper.offsetWidth - _this.slideText.offsetWidth) / 2, "px");
-        _this.slideFill[1].style.width = "".concat((_this.slideWrapper.offsetWidth - _this.slideText.offsetWidth) / 2, "px");
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          _this.slideFill[0].style.width = "".concat((_this.slideWrapper.offsetWidth - _this.slideText.offsetWidth) / 2, "px");
+          _this.slideFill[1].style.width = "".concat((_this.slideWrapper.offsetWidth - _this.slideText.offsetWidth) / 2, "px");
+        }, 250);
       });
     }
   }]);

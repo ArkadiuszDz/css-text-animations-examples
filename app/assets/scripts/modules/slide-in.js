@@ -16,9 +16,19 @@ export default class SlideIn {
     }
 
     events () {
+
+        let resizeTimer;
+
         window.addEventListener('resize' ,() => {
-            this.slideFill[0].style.width = `${(this.slideWrapper.offsetWidth - this.slideText.offsetWidth) / 2}px`;
-            this.slideFill[1].style.width = `${(this.slideWrapper.offsetWidth - this.slideText.offsetWidth) / 2}px`;
+
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+
+                this.slideFill[0].style.width = `${(this.slideWrapper.offsetWidth - this.slideText.offsetWidth) / 2}px`;
+                this.slideFill[1].style.width = `${(this.slideWrapper.offsetWidth - this.slideText.offsetWidth) / 2}px`;
+
+            },250);
+
         });
     }
 

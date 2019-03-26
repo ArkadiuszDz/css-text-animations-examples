@@ -623,3 +623,15 @@ h1 {
 .slide-in-text-outer {
     width: 100%;
 }
+
+#wrapper-18 {
+    p {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        font-family: Arial;
+        &:hover {
+            animation: shake 0.8s linear;
+        }
+    }
+}

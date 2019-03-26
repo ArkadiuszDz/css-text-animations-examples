@@ -1,6 +1,6 @@
-import $ from 'jquery';
 import SlideIn from './modules/slide-in';
 import RandomLetters from './modules/random-letters';
+
 
 document.addEventListener("DOMContentLoaded", function() {
 

@@ -4,6 +4,30 @@
   to {
     top: -5px; } }
 
+@keyframes shake {
+  0% {
+    transform: rotateZ(0); }
+  10% {
+    transform: translateY(-1px) rotateZ(1deg); }
+  20% {
+    transform: translateY(-2px) rotateZ(-1.5deg); }
+  30% {
+    transform: translateY(-3px) rotateZ(2deg); }
+  40% {
+    transform: translateY(-3.5px) rotateZ(-2.5deg); }
+  50% {
+    transform: translateY(-4px) rotateZ(3deg); }
+  60% {
+    transform: translateY(-3.5px) rotateZ(-2.5deg); }
+  70% {
+    transform: translateY(-3px) rotateZ(2deg); }
+  80% {
+    transform: translateY(-2px) rotateZ(-1.5deg); }
+  90% {
+    transform: translateY(-1px) rotateZ(1deg); }
+  100% {
+    transform: rotateZ(0); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -512,3 +536,11 @@ h1 {
 
 .slide-in-text-outer {
   width: 100%; }
+
+#wrapper-18 p {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial; }
+  #wrapper-18 p:hover {
+    animation: shake 0.8s linear; }

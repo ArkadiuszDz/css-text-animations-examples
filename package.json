@@ -41,6 +41,8 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.2.0"
+    "@babel/runtime": "^7.2.0",
+    "js-sha256": "^0.9.0",
+    "sha256-file": "^1.0.0"
   }
 }
